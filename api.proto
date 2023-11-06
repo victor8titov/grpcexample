@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package main;
 
-option go_package = "./grpcpb";
+option go_package = "./grpc/api";
 
 message Request {
     string text = 1;

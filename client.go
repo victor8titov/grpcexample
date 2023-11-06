@@ -3,15 +3,14 @@ package main
 import (
 	"fmt"
 
-	p "github.com/victor8titov/grpcexample/grpcpb"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 )
 
 var port = ":8080"
 
-func AboutToSayIt(ctx context.Context, m p.MessageServiceClient, text string) (*p.Response, error) {
-	request := &p.Request{
+func AboutToSayIt(ctx context.Context, m MessageServiceClient, text string) (*p.Response, error) {
+	request := &Request{
 		Text:    text,
 		Subtext: "New Message!",
 	}
